@@ -1,0 +1,101 @@
+[data-theme="light"],
+:root:not([data-theme="dark"]) {
+  --primary: #2c54a1;
+  --primary-hover: #FFF;
+  --primary-focus: #1b386a;
+  --primary-inverse: #FFF;
+  --icon-chevron: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='rgb(255, 255, 255)' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+
+}
+
+* {
+    color: var(--primary-inverse);
+}
+
+.container-fluid > h3,h4{
+    text-align: center;
+}
+
+nav {
+    background-color: var(--primary); 
+}
+
+nav hgroup {
+    margin: auto 1rem;
+}
+
+nav ul:last-of-type {
+    margin-right: 0;
+}
+
+nav ul li a, summary[role=link], summary::after, nav h4{
+    color: var(--primary-inverse);
+}
+
+
+summary[role=link]{
+    padding: 0;
+}
+
+
+hgroup{
+    text-align: center;
+}
+
+hgroup h3 a:hover{
+    color: var(--primary);
+}
+
+section.grid {
+    margin-bottom: 2rem;
+}
+
+article {
+    display: flex;
+    flex-direction: column;
+
+}
+
+
+article footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin-top: auto;
+    height: 0.5rem;
+    padding: 1.5rem;
+    
+}
+
+article header {
+   padding: 0;
+}
+
+section.container-fluid {
+    background-color: lightgrey;
+    margin: 0;
+    padding: 1.5rem;
+}
+
+footer, article footer  {
+    background-color: var(--primary);
+    color: var(--primary-inverse);
+    text-align: center;
+}
+
+body>footer {
+    padding: 1rem;
+}
+
+@media screen and (max-width: 992px) {
+    section.grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 576px) {
+    section.grid {
+        grid-template-columns: 1fr;
+    }
+}
